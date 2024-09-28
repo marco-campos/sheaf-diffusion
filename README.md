@@ -23,9 +23,9 @@ This project implements the sheaf diffusion process described in **Section 5** o
 
   $$x(t) = \exp(-t\alpha L_F) x(0)$$
 
-  where $\alpha > 0$ is a diffusion constant and $x(0) $ is the initial opinion vector.
+  where $\alpha > 0$ is a diffusion constant and $x(0)$ is the initial opinion vector.
 
-- A numerical simulation is performed using explicit Euler time-stepping to approximate the solution over time. The final solution $x(t)$ as $t \rightarrow \infty $ is compared to the orthogonal projection of the initial opinion vector onto the kernel of the sheaf Laplacian.
+- A numerical simulation is performed using explicit Euler time-stepping to approximate the solution over time. The final solution $x(t)$ as $t \rightarrow \infty$ is compared to the orthogonal projection of the initial opinion vector onto the kernel of the sheaf Laplacian.
 
 ### 3. **Visualization and Animation**
 - For graphs where the vector spaces have dimension at most 2, the project provides visualizations for the evolving dynamics:
