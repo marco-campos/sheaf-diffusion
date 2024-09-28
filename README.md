@@ -6,26 +6,26 @@ This project implements the sheaf diffusion process described in **Section 5** o
 ## Project Overview
 
 ### 1. **Sheaf Laplacian Construction**
-- The sheaf Laplacian $L_F$ is computed using the *coboundary* matrix (denoted as $ \delta$) obtained from the node and edge vector spaces and the corresponding connecting maps.
+- The sheaf Laplacian $L_F$ is computed using the *coboundary* matrix (denoted as $\delta$) obtained from the node and edge vector spaces and the corresponding connecting maps.
 - Each node and edge in the graph has an associated vector space, and the connecting maps define the linear transformations between these vector spaces.
 - For a given graph, the sheaf Laplacian is calculated as:
     
-    $$ L_F = \delta^T \delta $$
+    $$L_F = \delta^T \delta$$
 
   where $ \delta $ is a matrix built based on the given graph structure and connecting maps.
 
 ### 2. **Diffusion Process Simulation**
 - The project simulates the diffusion process governed by the differential equation:
 
-  $$\frac{dx}{dt} = -\alpha L_F x $$
+  $$\frac{dx}{dt} = -\alpha L_F x$$
 
   The exact solution to this equation is given by:
 
-  $$ x(t) = \exp(-t\alpha L_F) x(0)$$
+  $$x(t) = \exp(-t\alpha L_F) x(0)$$
 
-  where $\alpha > 0 $ is a diffusion constant and $ x(0) $ is the initial opinion vector.
+  where $\alpha > 0$ is a diffusion constant and $x(0) $ is the initial opinion vector.
 
-- A numerical simulation is performed using explicit Euler time-stepping to approximate the solution over time. The final solution $ x(t) $ as $ t \rightarrow \infty $ is compared to the orthogonal projection of the initial opinion vector onto the kernel of the sheaf Laplacian.
+- A numerical simulation is performed using explicit Euler time-stepping to approximate the solution over time. The final solution $x(t)$ as $t \rightarrow \infty $ is compared to the orthogonal projection of the initial opinion vector onto the kernel of the sheaf Laplacian.
 
 ### 3. **Visualization and Animation**
 - For graphs where the vector spaces have dimension at most 2, the project provides visualizations for the evolving dynamics:
